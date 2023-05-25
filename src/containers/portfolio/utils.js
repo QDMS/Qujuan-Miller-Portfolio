@@ -22,7 +22,7 @@ export const portfolioData = [
     },
     {
         sectionId: 2,
-        projectName: 'SmartChatz',
+        projectName: 'Smart Chatz',
         projectLink: 'https://play.google.com/store/apps/details?id=com.tismstudios.smartchatv2&hl=en_US&gl=US',
         image: ImageThree
     },
