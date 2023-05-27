@@ -1,39 +1,60 @@
 .video-player-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-player {
+ 
+  max-height: 70vh;
+  max-width: 70vw; /* Set maximum height for mobile devices */
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.fullscreen-button {
+  margin-left: 10px;
+}
+
+/* Full-screen styles */
+.video-player-container.fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 9999;
+}
+
+.video-player-container.fullscreen .video-player {
+  height: 100%; /* Adjust height for full-screen mode */
+}
+
+.video-player-container.fullscreen .controls {
+  display: none;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 600px) {
+  .video-player-container {
+    padding: 10px;
   }
-  
-  .video-player {
-    width: 100%;
-  }
-  
+
   .controls {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+    flex-wrap: wrap;
   }
-  
+
   .fullscreen-button {
-    margin-left: 10px;
+    margin-top: 10px;
+    margin-left: 0;
   }
-  
-  /* Full-screen styles */
-  .video-player-container.fullscreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    z-index: 9999;
+
+  .video-player {
+    max-height: 50vh; /* Adjust maximum height for mobile devices */
   }
-  
-  .video-player-container.fullscreen .video-player {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .video-player-container.fullscreen .controls {
-    display: none;
-  }
+}

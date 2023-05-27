@@ -3,6 +3,7 @@ import PageHeaderContent from "../../components/pageHeaderContent";
 import { GoBriefcase } from "react-icons/go";
 import "./styles.scss";
 import { filterOptions, portfolioData } from "./utils";
+import { Link } from "react-router-dom";
 
 const Portfolio = () => {
   const [filterValue, setFilterValue] = useState(1);
@@ -31,6 +32,7 @@ const Portfolio = () => {
             <li
               onClick={() => handleFilter(option.id)}
               key={`filter${option.id}`}
+              className={option.id === filterValue ? 'active' : ''}
             >
               {option.label}
             </li>
@@ -53,7 +55,9 @@ const Portfolio = () => {
                 {hoveredIndex === key && (
                   <div>
                     <p>{item.projectName}</p>
+                    <Link to={item.projectLink}>
                     <button>Go To Project</button>
+                    </Link>
                   </div>
                 )}
               </div>

@@ -19,7 +19,15 @@
                 color: var(--selected-theme-main-color);
                 text-transform: uppercase;
                 padding: 20px;
+                border-radius: 26px;
                 transition: all 0.5s ease;
+                &.active{
+                    background: var(--selected-theme-main-color);
+                    color: var(--selected-theme-sub-text-color);
+                    font-weight: 600;
+                    border-radius: 26px;
+                    animation: color_change 1s infinite alternate;
+                }
             }
         }
 
@@ -133,5 +141,35 @@
     }
     to{
         width: 100%;
+    }
+}
+
+@keyframes color_change {
+	from { background-color: black; }
+	to { background-color: var(--selected-theme-main-color); }
+}
+
+@media only screen and (max-width: 480px){
+    .portfolio__content__filter > li{
+        font-size: 11px;
+    }
+
+    .portfolio__content__cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+}
+
+@media only screen and (max-width: 481px) and (max-width: 768px){
+    .portfolio__content__filter > li{
+        font-size: 14px;
+    }
+
+    .portfolio__content__cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio__content__cards__item .overlay div p{
+        font-size: .75rem;
     }
 }
