@@ -11,7 +11,9 @@ const Videos = () => {
       icon={<ImFilm size={40}/>}
       icon1={<ImVideoCamera size={40}/>}
       />
-      <VideoPlayer/>
+      <VideoPlayer
+      
+      />
     </section>
   )
 }

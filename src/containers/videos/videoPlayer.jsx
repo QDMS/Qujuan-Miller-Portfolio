@@ -3,6 +3,7 @@ import './styles.scss';
 import Video1 from './GoingToJail.mp4'
 import Video2 from './Drop_Chain_Anim.mp4'
 import Video3 from './JumarBusinessAd.mp4'
+import { CgCloseO } from "react-icons/cg";
  
 const VideoPlayer = () => {
   const [selectedVideo, setSelectedVideo] = useState('');
@@ -25,10 +26,15 @@ const VideoPlayer = () => {
     setIsFullscreen(!isFullscreen);
   };
 
+  const exitFullscreen = () => {
+    setIsFullscreen(false);
+  };
+
   return (
     <div
       className={`video-player-container ${isFullscreen ? 'fullscreen' : ''}`}
     >
+      
       <select value={selectedVideo} onChange={handleVideoChange}>
         <option value="">Select a Film Reel</option>
         <option value={Video1}>Behind The Movement(Going to jail scene)</option>
@@ -53,6 +59,9 @@ const VideoPlayer = () => {
             </button>
           </div>
         </div>
+      )}
+      {isFullscreen && (
+            <CgCloseO className="close-button" size={50} onClick={exitFullscreen} />
       )}
     </div>
   );
