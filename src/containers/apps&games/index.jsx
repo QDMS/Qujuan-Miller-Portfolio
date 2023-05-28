@@ -13,7 +13,7 @@ const AppsGames = () => {
         icon1={<CgGames size={40} />}
       />
       <>
-        <h1 style={{ textAlign: "center", padding: 20, fontSize: 50, fontWeight: 700, letterSpacing: 1.5, lineHeight: 1, textTransform: "capitalize", color: "var(--selected-theme-main-color)", position: "relative", flex: 1}}>Coming Soon</h1>
+        <h1 style={{ textAlign: "center", padding: 20, fontSize: 50, fontWeight: 700, letterSpacing: 1.5, lineHeight: 1, textTransform: "capitalize", color: "var(--selected-theme-main-color)", position: "relative", flex: 1}}>Apps and Game Links Coming Soon</h1>
       </>
     </section>
   );
