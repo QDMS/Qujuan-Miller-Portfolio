@@ -38,14 +38,11 @@ const VideoPlayer = () => {
       <select value={selectedVideo} onChange={handleVideoChange}>
         <option value="">Select a Film Reel</option>
         <option value={Video1}>Behind The Movement(Going to jail scene)</option>
-        <option value="https://example.com/video2.mp4">Video 2</option>
-        <option value="https://example.com/video3.mp4">Video 3</option>
       </select>
       <select value={selectedVideo} onChange={handleVideoChange}>
         <option value="">Select a Animation Video</option>
         <option value={Video2}>Drop Chain Ent. Animation(Made with Blender)</option>
         <option value={Video3}>Jay-Tech Solution Ad(Made with ThreeJS)</option>
-        <option value="https://example.com/video3.mp4">Video 3</option>
       </select>
 
       {selectedVideo && (
