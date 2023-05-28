@@ -7,6 +7,7 @@ import Img3 from "./img3.png";
 import Img4 from "./Img4.png";
 import Img5 from "./img5.png";
 import Img6 from "./img6.jpg";
+import Img7 from "../../assets/logo.png";
 
 const DesignGallery = () => {
   let data = [
@@ -33,6 +34,10 @@ const DesignGallery = () => {
     {
       id: 6,
       imgSrc: Img6,
+    },
+    {
+      id: 7,
+      imgSrc: Img7,
     },
   ];
 
