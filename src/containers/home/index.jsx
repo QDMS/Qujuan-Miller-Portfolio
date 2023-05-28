@@ -75,7 +75,6 @@ const Home = () => {
           </div>
         </div>
       </Animate>
-      <Ad />
     </section>
   );
 };
