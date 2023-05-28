@@ -1,0 +1,131 @@
+.contact {
+    &__content {
+        padding: 20px;
+
+        &__header-text {
+            display: inline-block;
+            color: var(--selected-theme-sub-text-color);
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1rem;
+            letter-spacing: 0.5px;
+            position: relative;
+            text-transform: uppercase;
+            padding: 5px 10px;
+            border-bottom: 2px solid var(--selected-theme-main-color);
+        }
+
+        &__header-text::before,
+        &__header-text::after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 5px;
+            background-color: var(--selected-theme-main-color);
+            bottom: -1px;
+        }
+
+        &__header-text::before {
+            left: 0;
+        }
+
+        &__header-text::after {
+            right: 0;
+        }
+
+        &__form {
+            margin-top: 30px;
+
+            &__controlsWrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+                margin-bottom: 30px;
+
+                div{
+                    position: relative;
+                    .inputName, .inputEmail, .inputDescription, .inputSubject{
+                        width: 100%;
+                        border: 2px solid var(--selected-theme-main-color);
+                        padding: 15px 10px;
+                        transition: all 0.5s ease;
+                        position: relative;
+                        z-index: 1;
+                        background: transparent;
+                        color: var(--selected-theme-main-color);
+                    }
+
+                    .namelabel, .emaillabel, .descriptionlabel, .subjectlabel{
+                        position: absolute;
+                        font-weight: 500;
+                        top: 7px;
+                        left: 12px;
+                        z-index: 0;
+                        color: var(--selected-theme-main-color);
+                        font-size: 16px;
+                    }
+
+                    .inputName:focus, .inputEmail:focus, .inputDescription:focus, .inputSubject:focus{
+                        outline: none;
+                    }
+
+                    .inputName:focus + .namelabel,
+                    .inputEmail:focus + .emaillabel,
+                    .inputDescription:focus + .descriptionlabel,
+                    .inputSubject:focus + .subjectlabel
+                    {
+                        font-size: 18px;
+                        top: -25px;
+                        left: 0px;
+                    }
+                }
+            }
+
+            button {
+                cursor: pointer;
+                margin-top: 15px;
+                padding: 10px 70px;
+                --c: #fff;
+                /* text color */
+                background: linear-gradient(90deg, #0000 33%, #fff5, #0000 67%) var(--_p, 100%)/300% no-repeat,
+                    var(--selected-theme-main-color);
+                /* background color */
+                color: #0000;
+                border: none;
+                transform: perspective(500px) rotateY(calc(20deg*var(--_i, -1)));
+                text-shadow: calc(var(--_i, -1)* 0.08em) -.01em 0 var(--c),
+                    calc(var(--_i, -1)*-0.08em) .01em 2px #0004;
+                outline-offset: .1em;
+                transition: 0.3s;
+            }
+
+            button:hover,
+            button:focus-visible {
+                --_p: 0%;
+                --_i: 1;
+            }
+
+            button:active {
+                text-shadow: none;
+                color: var(--c);
+                box-shadow: inset 0 0 9e9q #0005;
+                transition: 0s;
+            }
+
+            button {
+                font-weight: bold;
+                font-size: 2rem;
+                margin: 0;
+                cursor: pointer;
+                padding: .1em .3em;
+            }
+        }
+    }
+}
+
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}

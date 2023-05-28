@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./styles.scss";
 import { FaImdb } from "react-icons/fa"
 import {
@@ -12,7 +13,7 @@ import {
   ImSteam2,
 } from "react-icons/im";
 import { Animate } from "react-simple-animate";
-import { Link } from "react-router-dom";
+import CV from './cv.pdf';
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Home = () => {
         <h1>
           Hello, I'm Qujuan,
           <br />
-          Developer / Designer / Creator
+          Developer/Designer/Creator
         </h1>
       </div>
       <Animate
@@ -37,36 +38,38 @@ const Home = () => {
       >
         <div className="contact-me">
           <div className="contact-me__buttons-wrapper">
-            <button>Hire Me</button>
-            <a>Download Resume</a>
+            <Link style={{ textDecoration: 'none' }} to="/contact">
+            Hire Me
+            </Link>
+            <a href={CV} style={{ textDecoration: 'none' }}>Resume</a>
           </div>
           <div className="contact-me__socials-wrapper">
             <Link to="https://www.facebook.com/qujuan.miller.75/">
-              <ImFacebook2 size={32} />
+              <ImFacebook2 size={25} />
             </Link>
             <Link to="https://www.linkedin.com/in/qujuan-miller-70187116b/">
-              <ImLinkedin size={32} />
+              <ImLinkedin size={25} />
             </Link>
             <Link to="https://github.com/QDMS">
-              <ImGithub size={32} />
+              <ImGithub size={25} />
             </Link>
             <Link to="https://www.instagram.com/tismstudios/">
-              <ImInstagram size={32} />
+              <ImInstagram size={25} />
             </Link>
             <Link to="https://twitter.com/Qujuankone">
-              <ImTwitter size={32} />
+              <ImTwitter size={25} />
             </Link>
             <Link to="https://www.youtube.com/channel/UC7TYpkyqeRxmwkLQYpthJog">
-              <ImYoutube size={32} />
+              <ImYoutube size={25} />
             </Link>
             <Link to="https://soundcloud.com/millertime239">
-              <ImSoundcloud2 size={32} />
+              <ImSoundcloud2 size={25} />
             </Link>
             <Link to="https://steamcommunity.com/profiles/76561198116529002/">
-              <ImSteam2 size={32} />
+              <ImSteam2 size={25} />
             </Link>
             <Link to="https://www.imdb.com/name/nm9305978/?ref_=nv_sr_srsg_0_tt_1_nm_2_q_Qujua">
-              <FaImdb size={32} />
+              <FaImdb size={25} />
             </Link>
           </div>
         </div>
