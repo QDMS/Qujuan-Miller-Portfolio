@@ -14,7 +14,6 @@ import {
 } from "react-icons/im";
 import { Animate } from "react-simple-animate";
 import CV from './cv.pdf';
-import Ad from "../../components/Ad";
 
 const Home = () => {
   return (
